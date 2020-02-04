@@ -12,16 +12,19 @@ namespace Homework2
         {
 
 
+
             //Ex1//
 
             // Fie urmatoarea secventa de cod:"...". Ce va afisa aceasta la executie si de ce?
 
-            
+            /*
+             * 
             int a = 3;
             int b = (a = 2) * a;
             int c = b * (b = 5); 
             Console.WriteLine("a =" + a + ", b =" + b + ", c =" + c);
-            
+
+            */
 
             /*Rezolvare
 
@@ -37,11 +40,13 @@ namespace Homework2
 
             // Fie urmatorul subprogram:"...". Ce se poate spune despre acesta? Se compileaza? Ce afiseaza?
 
-            
+            /*
+
             double d = 2.95;
             int i = 4;
             Console.WriteLine(++d > i ? d : i);
-            
+
+            */
 
             /*Rezolvare
 
@@ -59,15 +64,16 @@ namespace Homework2
 
             //Fie urmatorul subprogram:"...". Ce se afisa si de ce?
 
-            
+            /*
+
             int a = 3;
             if (++a < 4)
                 if (a++ < 4)
                     Console.WriteLine(a);
                 else
                     Console.WriteLine(a);
-             
 
+            */
 
             /*Rezolvare
              In primul "if" valoarea lui "a" devine 4 dupa incrementare; 4 < 4 => Fals
@@ -81,14 +87,16 @@ namespace Homework2
 
             //Fie urmatorul subprogram:"...". 
 
-            
+            /*
+
             int suma = 0;
             for (int i = 1; i < 10; i++)
             {
                 suma = suma + i;
             }
             Console.WriteLine("Suma este: " +suma);
-            
+
+            */
 
             /*Rezolvare
 
@@ -102,14 +110,15 @@ namespace Homework2
 
             //Scrieti un program care sa returneze n! (adica n = 1 * 2 * 3 * … * n), unde n < 13 este un numar natural.
 
-            
+            /*
             int inmultire = 1;
             for (int n = 1; n < 13; n++)
             {
                 inmultire = inmultire * n;
             }
             Console.WriteLine(inmultire);
-            
+
+            */
 
             //Rezolvare: n = valoarea lui "n" pornind de la valoarea 1 si incrementata cu 1 pana la n < 13.
 
@@ -121,7 +130,8 @@ namespace Homework2
 
             //Rezolvare 1 - cu If - Else
 
-            
+            /*
+
             int a = 3;
             int b = 2;
             int c = 4;
@@ -132,10 +142,11 @@ namespace Homework2
                 Console.WriteLine(b);
             else
                 Console.WriteLine(c);
-            
+
+            */
 
             //Rezolvare 2 - fara Il - Else
-            
+
             /*
             int a = 7;
             int b = 3;
@@ -150,7 +161,7 @@ namespace Homework2
 
             // Determinati daca un numar este par sau impar.
 
-            
+            /*
             int a = 7;
             if (a % 2 == 0)
 
@@ -159,7 +170,7 @@ namespace Homework2
             else
 
                 Console.WriteLine("Number is odd");
-            
+            */
 
             //Rezolvare/: Am folosit operatorul "%" pentru a determina restul impartirii;
             //Restul se compara cu 0 => daca este 0, atunci numarul este par, daca nu, numarul este impar.
@@ -171,8 +182,7 @@ namespace Homework2
             De exemplu : ziua 1 este echivalenta zilei “Luni”, ziua 2 este “Marti” etc.
             */
 
-
-            
+            /*
             {
                 int caseSwitch = 5;
 
@@ -205,15 +215,90 @@ namespace Homework2
 
                 }
             } 
-            
-              
+            */
 
-           
+            //Teme seria 2:
+
+            //Ex1: Scrieti un program care afiseaza primele 4 numere naturale care sunt egale cu suma divizorilor lor.
+            //Exemplu: 28 = 1 + 2 + 4 +7 +14 este un numar valid.
+
+            /*
+             
+            int numar = 31;
+            int sum = 0;
+            int cateAmGasit = 0;
 
 
+                for (int i = 1; i < numar; i++)
+                {
+                    //numar++;
+
+                    if (numar % i == 0)
+                    {
+                        sum += i;
+                    }
+                }
+
+                if (sum == numar)
+                {
+                    cateAmGasit++;
+                    Console.WriteLine("numarele sunt: " + sum);
+                }
+                
+                */
+
+
+            // Ex 2: Presupunem ca depunem o suma (depozit la termen) intr-o banca ce ofera o dobanda de 25% pe an. 
+            //Sa se calculeze suma finala dupa un anumit numar de ani (se va tine cont de “dobanda la dobanda”).
+
+            /*
+
+            double suma = 100;
+            double dobanda = 0.25;
+            int b = 10;
+
+
+            for (int i = 0; i <= b; i++)
+            {
+                suma = suma + (suma * dobanda);
+                Console.WriteLine("anu " + i + "total: " + suma);
+            }
+            */
+
+            /*
+            Ex 3: Scrieti un program care primeste la intrare (declarati voi ca variabila) un numar de secunde 
+            si afiseaza maximul de ore, minute, secunde care este echivant ca timp cu numarul initial de secunde.
+            De exemplu: 7384 secunde este echivalent cu 2 ore 3 minute si 4 secunde.
+            */
+
+            /*
+            int nr = 3599;
+
+            int secunde;
+            int minute;
+            int ore;
+
+            secunde = nr % 60;
+            minute = nr / 60;
+
+            if (minute >= 60)
+            {
+                ore = minute / 60;
+                minute = minute % 60;
+                Console.WriteLine(secunde + " " + minute + " " + ore);
+            }
+
+            else
+            {
+                ore = 0;
+                Console.WriteLine(secunde + " " + minute + " " + ore);
+            }
+
+            */
 
 
         }
+
     }
 }
 
